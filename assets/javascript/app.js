@@ -48,11 +48,16 @@ function start(){
     console.log("Started");
     $("#conButton").html("");
     outputObject();
+
+
+  
     
 }
 
 function outputObject(){
     //declare object that will store in the values of current question and answers
+    //need to add in for-loop that will loop through an array containing the objects
+
     var currentObj = question1;
     //outputs the question:
     $("#question").append(currentObj.question);
@@ -60,9 +65,9 @@ function outputObject(){
     //dynamically create new buttons that will store in the answers 
     
     //outputs the answers:
-    $("#answers").append("<button>"+currentObj.one+"</button>");
-    $("#answers").append("<button>"+currentObj.two+"</button>");
-    $("#answers").append("<button>"+currentObj.three+"</button>");
+    $("#question1").append("<button>"+currentObj.one+"</button>");
+    $("#question2").append("<button>"+currentObj.two+"</button>");
+    $("#question3").append("<button>"+currentObj.three+"</button>");
     //need to set a bool variable that sets to true once user actually inputs to run getInput function
    
     getInput(currentObj);
