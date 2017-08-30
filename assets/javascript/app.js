@@ -48,12 +48,17 @@ function start(){
 }
 
 function outputObject(){
-    //declare object that will store in the values of current question
+    //declare object that will store in the values of current question and answers
     var currentObj = question1;
+    //outputs the question:
     $("#question").append(currentObj.question);
     console.log(currentObj.question);
-
-
+    //dynamically create new buttons that will store in the answers 
+    
+    //outputs the answers:
+    $("#answers").append("<button>"+currentObj.one+"</button>");
+    $("#answers").append("<button>"+currentObj.two+"</button>");
+    $("#answers").append("<button>"+currentObj.three+"</button>");
 }
 
 //------------------------------
