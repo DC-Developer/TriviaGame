@@ -7,6 +7,7 @@ var incorrectAnswer= "";
 
 var $start = $("#start");
 //objects that hold each question and answers
+//also probably storing these objects into an array is a good idea, so later we can just loop through the array using index number to conveniently display each variable for each timer iteration
 var question1 ={
     question: "How old am I?",
     one: 12,
@@ -42,10 +43,18 @@ var question3 ={
 
 function start(){
     console.log("Started");
-    $("#contentArea").html("");
-
+    $("#conButton").html("");
+    outputObject();
 }
 
+function outputObject(){
+    //declare object that will store in the values of current question
+    var currentObj = question1;
+    $("#question").append(currentObj.question);
+    console.log(currentObj.question);
+
+
+}
 
 //------------------------------
 
@@ -59,9 +68,9 @@ function start(){
         start();
     });
 
-    setTimeout(function(){
-        console.log("Blah");
-        $("#contentArea").html($start);
-    },5000 );
+    //setTimeout(function(){
+        //console.log("Blah");
+       // $("#conButton").html($start);
+    //},5000 );
     
 });
