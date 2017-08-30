@@ -1,7 +1,7 @@
 $(document).ready(function(){
 //global variables 
 var time = 0;
-var userInput = false;
+var userClick = false;
 var correctAnswer = "";
 var incorrectAnswer= "";
 
@@ -38,13 +38,17 @@ var question3 ={
 };
 //-------------------------------
 //function declarations
+$("button").on("hover", function(){
+   this.css("background", "blue");
 
+});
 //this one starts the program
 
 function start(){
     console.log("Started");
     $("#conButton").html("");
     outputObject();
+    
 }
 
 function outputObject(){
@@ -59,8 +63,31 @@ function outputObject(){
     $("#answers").append("<button>"+currentObj.one+"</button>");
     $("#answers").append("<button>"+currentObj.two+"</button>");
     $("#answers").append("<button>"+currentObj.three+"</button>");
+    //need to set a bool variable that sets to true once user actually inputs to run getInput function
+   
+    getInput(currentObj);
 }
+function getInput(currentObj){
+    //declare variable for userInput
+    var userInput= 0;
+    //on user click, gets the value of the button and returns 
+    console.log(currentObj.correctAnswer);
+    $("button").on("click", function(){
+       userInput= $(this).html();
+       evalInput(userInput, currentObj);
+    });
+    
+}
+function evalInput(input, obj){
+    
+    if(input == obj.correctAnswer){
+        console.log("input");
+        alert("You are correct");
 
+    }
+
+
+}
 //------------------------------
 
 //begin the program by selecting the start button id, and calling start() 
