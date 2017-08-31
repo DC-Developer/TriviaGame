@@ -231,7 +231,7 @@ if(result == objCorrectAnswer){
     $("#question3").html("")
    //use object's stored gif
     $("#question").html(img);
-   
+    alert("Heyyyy bauceee, you got it!");
     
     console.log("Hooray you did it!");
     
