@@ -23,7 +23,7 @@ var question1 ={
     two: "Doofus Rick",
     three: "Rick Sanchez",
     correctAnswer: "Rick Sanchez",
-    image: "https://giphy.com/gifs/jomYWrLTTzq3C/html5"
+    image: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/rick.gif"
     //put a link to the gif that will display after the answer is guessed right
 };
 
@@ -34,7 +34,7 @@ var question2 ={
     two: "George Michaels",
     three: "both",
     correctAnswer: "George Micahels",
-    image: "https://giphy.com/gifs/VEHo7DrXV0SIg/html5"
+    image: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/para.gif"
     //put a link to the gif that will display after the answer is guessed right
 };
 
@@ -45,7 +45,7 @@ var question3 ={
     two: 2,
     three: 3,
     correctAnswer: 2,
-    image: "https://giphy.com/gifs/l0IyiqveVntHJ5sas/html5"
+    image: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/leo.gif"
     //put a link to the gif that will display after the answer is guessed right
 };
 var question4 ={
@@ -53,7 +53,7 @@ var question4 ={
     one: "Ten",
     two: "The two that's left",
     three: "The four you took",
-    correctAnswer: "The four you took",
+    correctAnswer: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/giphy.gif",
     image: ""
     //put a link to the gif that will display after the answer is guessed right
 };
@@ -63,7 +63,7 @@ var question5 ={
     two: "Jean Claude Van Damme",
     three: "Russell Crowe",
     correctAnswer: "Russell Crowe",
-    image: "https://giphy.com/gifs/2hvc71hHwgLe0/html5"
+    image: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/maximus.gif"
     //put a link to the gif that will display after the answer is guessed right
 };
 var question6 ={
@@ -72,7 +72,7 @@ var question6 ={
     two: "Step Brothers",
     three: "The Hangover part 2",
     correctAnswer: "DodgeBall",
-    image: "https://giphy.com/gifs/yFf2d0u9WBVdu/html5"
+    image: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/nobody!.gif"
     //put a link to the gif that will display after the answer is guessed right
 };
 //store objects into array
@@ -221,13 +221,16 @@ function showGif(result,objCorrectAnswer, obj){
 
 if(result == objCorrectAnswer){
     //code will display gif to html
+    var img = $('<img>');
+    img.attr('src', obj.image);
     
+
     $("#question").html("");
     $("#question1").html("")
     $("#question2").html("")
     $("#question3").html("")
    //use object's stored gif
-    $("#question").html();
+    $("#question").html(img);
    
     
     console.log("Hooray you did it!");
