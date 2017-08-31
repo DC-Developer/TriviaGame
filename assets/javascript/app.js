@@ -33,7 +33,7 @@ var question2 ={
     one: "A paraplegic",
     two: "George Michaels",
     three: "both",
-    correctAnswer: "George Micahels",
+    correctAnswer: "George Michaels",
     image: "https://raw.githubusercontent.com/DC-Developer/TriviaGame/master/assets/images/para.gif"
     //put a link to the gif that will display after the answer is guessed right
 };
@@ -230,8 +230,8 @@ if(result == objCorrectAnswer){
     $("#question2").html("")
     $("#question3").html("")
    //use object's stored gif
-    $("#question").html(img);
-    alert("Heyyyy bauceee, you got it!");
+    $("#question2").html(img);
+    $("#question3").html("Heyyyy bauceee, you got it!");
     
     console.log("Hooray you did it!");
     
