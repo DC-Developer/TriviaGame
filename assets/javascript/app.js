@@ -59,13 +59,12 @@ function start(){
 }
 
 function outputObject(cycle){
-    //declare object that will store in the values of current question and answers
-    //need to add in for-loop that will loop through an array containing the objects
+    //iteration will loop through the array containing the objects
     //this object will also loop into the index of the next array object, based off a return value from the evalInput function
     
 
             //outputs the question:
-            $("#question").html(storage[iteration].question);
+            $("#question").html("<section>"+storage[iteration].question+"</section>");
 
             //dynamically create new buttons that will store in the answers 
             //outputs the answers:
@@ -76,7 +75,10 @@ function outputObject(cycle){
             
             getInput(storage[iteration]);
             
+            if(iteration === 2){
+                alert("You are at the end of the tunnel");
 
+            }
         
 
 
@@ -141,7 +143,14 @@ function showGif(result,objCorrectAnswer){
 
 if(result == objCorrectAnswer){
     //code will display gif to html
-    //will call output function with a set delay of 5
+    
+    $("#question").html("");
+    $("#question1").html("")
+    $("#question2").html("")
+    $("#question3").html("")
+   
+    $("#question").html('<iframe src="https://giphy.com/embed/1BXa2alBjrCXC" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>');
+   
     alert("You are correct");
     console.log("Hooray you did it!");
     

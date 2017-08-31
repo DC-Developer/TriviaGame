@@ -9,8 +9,11 @@ body{
     
 }
 h1{
-    color: rgba(0, 0, 0, 0.67);
-
+    color: white;
+    height: 90px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    font-size: 52px;
 }
 #container{
     height: 100%;
@@ -37,9 +40,14 @@ li button{
     background: rgba(255, 255, 255, 0.69);
     
 }
+section{
+    height: 200px;
+    color: rgba(0, 0, 0, 0.67);
+
+}
 #question{
     width: 80%;
-    height: 200px;
+    height: 100%;
     background: white;
     color: #535151;
     font-size: 30px;
@@ -50,8 +58,6 @@ li button{
 #question1{
     width: 80%;
     height: 100%;
-    
-    
     
 }
 #question2{
